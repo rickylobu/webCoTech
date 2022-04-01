@@ -6,8 +6,6 @@ página web sencilla para venta de equipo de computo HTML, CSS, JAVA y MySQL
 
 Integrantes del equipo:
 Ricardo López Arriaga Bueno
-Alejandro Gabriel Rodriguez Fuentes
-Daniel Morales Horta 
 Carlos Gael Díaz Ceballos 
 
 Objetivo 
