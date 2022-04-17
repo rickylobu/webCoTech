@@ -12,5 +12,6 @@ public interface DaoUsuario {
     public void Eliminar (Usuario usr)throws Exception;
     public List<Usuario> Listar()throws Exception;
     public Usuario BusUsrXId(int id)throws Exception;;
-    
+    public Usuario BusUsrXEmail(String email)throws Exception;;
+    public Usuario BusUsrXUsuario(String usuario)throws Exception;;
 }

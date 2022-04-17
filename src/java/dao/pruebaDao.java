@@ -107,7 +107,7 @@ public class pruebaDao {
         
         System.out.println("____Usuario encontrado con exito_____");
 
-        }catch(Exception e){
+        }catch(Exception}catch e){
             System.out.println(e.getMessage());
             System.out.println("usuario no encontrado");
 

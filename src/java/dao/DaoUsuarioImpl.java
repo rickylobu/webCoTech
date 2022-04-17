@@ -127,4 +127,51 @@ public class DaoUsuarioImpl extends ConexionClever implements DaoUsuario {
         
         return usr;
     }
+
+    public Usuario BusUsrXEmail(String email) throws Exception {
+        Usuario usr=null;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.conexion.prepareStatement("SELECT * FROM `usuarios` WHERE `email`=(?);");
+            //SELECT * FROM `usuarios` WHERE `id_usuario`= 4;            
+            st.setString(1, email);
+            rs = st.executeQuery();
+
+            while (rs.next()) {
+                usr = new Usuario(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4));
+                
+            }
+            rs.close();
+            st.close();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.Cerrar();
+        }
+        
+        return usr;
+    }
+    public Usuario BusUsrXUsuario(String user) throws Exception {
+        Usuario usr=null;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.conexion.prepareStatement("SELECT * FROM `usuarios` WHERE `nombre_usuario`=(?);");
+            //SELECT * FROM `usuarios` WHERE `id_usuario`= 4;            
+            st.setString(1, user);
+            rs = st.executeQuery();
+
+            while (rs.next()) {
+                usr = new Usuario(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4));
+                
+            }
+            rs.close();
+            st.close();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            this.Cerrar();
+        }
+        
+        return usr;
+    }
 }

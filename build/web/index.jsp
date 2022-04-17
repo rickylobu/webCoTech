@@ -36,7 +36,10 @@
         <jsp:include page="footer.jsp"></jsp:include>
         
         <%
-            
+            HttpSession sesion =request.getSession();
+            if(sesion.getAttribute("log")==null){
+            response.sendRedirect("inicio-sesion.jsp");
+            }
             %>
     </body>
 </html>

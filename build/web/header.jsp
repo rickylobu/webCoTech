@@ -23,7 +23,18 @@
                     <a href="gaming.jsp" class="opcion">Gaming</a>
                     <a href="hogar.jsp" class="opcion">Hogar</a>
                     <a href="laboral.jsp" class="opcion">Laboral</a>
-                    <a href="inicio-sesion.jsp" class="opcion">Iniciar Sesión</a>
+                    <%
+                        HttpSession sesion = request.getSession();
+                        if (sesion.getAttribute("log")!=null) {
+                    %>
+                    <a href="cerrar_sesion.jsp" class="opcion">Cerrar Sesion</a>
+                    <%
+                        } else {
+                        %>
+                    <a href="inicio-sesion.jsp" class="opcion">Iniciar Sesion</a>
+                    <%
+                        }
+                    %>
                     <a href="carrito.jsp" class="opcion">Carrito</a>
                 </nav>
             </div>
